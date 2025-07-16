@@ -1,0 +1,236 @@
+.contact__container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/* ============================= ASIDE ============================= */
+.contact__aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 7rem;
+}
+
+.aside__image {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact__aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact__aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact__details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact__socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__socials a {
+    background: var(--color-bg2);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__socials a:hover {
+    background: transparent;
+    border-color: var(--color-white);
+}
+
+/* ============================= FORM ============================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form__name {
+    display: flex;
+    gap: 1.2rem;
+}
+
+form input[type="text"] {
+    width: 50%;
+}
+
+form input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+form .btn {
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+/* ============================= MEDIA QUERIES (TABLETS) ============================= */
+@media screen and (max-width: 64rem) {
+    .contact {
+        padding-bottom: 0;
+    }
+    
+    .contact__container {
+        gap: 1.5rem;
+        margin-top: -12rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    
+    .contact__aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    
+    form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+
+    .reply__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-200px) translateY(-100px);
+        position: relative;
+    }
+    .reply__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-400px) translateY(-100px);
+        position: relative;
+        width: 100%;
+        padding-top: 5rem;
+        padding-bottom: -5rem;
+        text-decoration: underline;
+        display: none;
+    }
+    
+    .reply__container::after {
+        display: none;
+    }
+    
+    .reply__container h4 {
+        font-size: 1.8rem;
+        display: none;
+    }
+       
+}
+
+/* ============================= MEDIA QUERIES (PHONES) ============================= */
+@media screen and (max-width: 37.5rem) {
+    .contact__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: -300px;
+        padding: 0;
+    }
+
+    form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form__name {
+        flex-direction: column;
+    }
+
+    .form__name input[type="text"] {
+        width: 100%;
+    }
+
+    .reply__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-400px) translateY(-100px);
+        position: relative;
+        width: 100%;
+        padding-top: 5rem;
+        padding-bottom: -5rem;
+        text-decoration: underline;
+    }
+    
+    .reply__container::after {
+        display: none;
+    }
+
+    .reply__container h4 {
+        font-size: 1rem;
+        display: none;
+    }
+}
+
+.reply__container {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25rem;
+    margin-top: 20rem;
+    margin-bottom: -5rem;
+    position: relative;
+}
+
+.reply__container::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    animation: animate__line 4s linear infinite;
+}
+
+@keyframes animate__line {
+    0%,40%,30%,90% {
+        width: 200px;
+    }
+
+    50%,70%,80% {
+        width: 50px;
+    }
+
+    100%,60%,10% {
+        width: 300px;
+    }
+
+}
+
+
+.reply__container i {
+    text-align: center;
+}
