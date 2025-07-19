@@ -847,7 +847,7 @@ header {
     /* ========================== HEADER ========================== */
     header {
         padding-top: 7rem;
-        height: 110vh;
+        height: 80vh;
     }
 
     .header__container {
